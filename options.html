@@ -1,0 +1,50 @@
+<html>
+<head>
+<script src="scripts/jquery.js"></script>
+<title>Options</title>
+<link rel="stylesheet" href="design/options.css" type="text/css">
+</head>
+<body>
+<div class="button" id="button">
+    <span>Русский</span>
+</div>
+<div class="lang" id="lang">
+    <span>Язык:</span>
+</div>
+<script>
+$("html").keydown(rev);
+function rev(e)
+{
+        if(e.which==27)
+                re();
+}        
+function re()
+{
+location="index.html"
+}
+var back = $("<div/>").attr("id", "back").appendTo("body");
+var logo= $("<img/>").attr("src", "images/Options.png");
+back.append(logo);
+logo.css({
+"position":"absolute",
+"left":"185px"
+});
+back.append(lang);
+back.append(button);
+back.css({
+"position":"absolute",
+"background-image":"url(images/cobblestone.jpg)",
+"width":"800px",
+"height":"800px",
+"left":"70px",
+"top":"80px"
+});
+var langchange = $("#button");
+langchange.click(change);
+function change()
+{
+	location="OptionsEng.html"
+}
+</script>
+</body>
+</html>
